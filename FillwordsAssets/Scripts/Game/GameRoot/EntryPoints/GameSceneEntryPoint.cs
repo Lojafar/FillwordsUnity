@@ -3,7 +3,7 @@ using FillWords.MainMenu.Root;
 using Zenject;
 namespace FillWords.Root.EntryPoint
 {
-    public class GameSceneEntryPoint : IInitializable
+    class GameSceneEntryPoint : IInitializable
     {
         readonly TabsHandler tabsHandler;
         public GameSceneEntryPoint(TabsHandler _tabsHandler)

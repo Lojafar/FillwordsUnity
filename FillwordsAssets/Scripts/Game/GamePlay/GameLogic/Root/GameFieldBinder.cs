@@ -5,7 +5,7 @@ using FillWords.Gameplay.Level;
 using Zenject;
 namespace FillWords.Gameplay.Game.Root
 {
-    public class GameFieldBinder
+    class GameFieldBinder
     {
         readonly GameTabModel gameTabModel;
         GameFieldViewBase gameFieldView;

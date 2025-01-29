@@ -9,7 +9,7 @@ using UnityEngine;
 using DG.Tweening;
 namespace FillWords.Gameplay.Game
 {
-    public class GameFieldView : GameFieldViewBase
+    class GameFieldView : GameFieldViewBase
     {
         [SerializeField] CellsContainer cellsContainer;
         CellsSelection cellsSelection;

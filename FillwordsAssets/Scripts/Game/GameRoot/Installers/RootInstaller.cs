@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace FillWords.Root.Installers
 {
-    public class RootInstaller : MonoInstaller
+    class RootInstaller : MonoInstaller
     {
         [SerializeField] AudioSourcesHolder audioSourcesHolder;
         public override void InstallBindings()

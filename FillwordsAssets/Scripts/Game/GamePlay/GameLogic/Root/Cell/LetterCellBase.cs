@@ -2,7 +2,7 @@
 using R3;
 namespace FillWords.Gameplay.Game.Root.Cell
 {
-    public abstract class LetterCellBase : MonoBehaviour
+    abstract class LetterCellBase : MonoBehaviour
     {
         CellData cellData;
         public CellData CellData => cellData;

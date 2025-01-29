@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using FillWords.Utils;
 namespace FillWords.Root.SceneManagment
 {
-    public class ScenesLoader : IScenesLoader
+    class ScenesLoader : IScenesLoader
     {
         readonly Coroutines coroutines;
         const float fullLoadingPercent = 1f;

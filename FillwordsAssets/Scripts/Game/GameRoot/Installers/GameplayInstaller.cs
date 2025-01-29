@@ -7,7 +7,7 @@ using FillWords.Gameplay.Level;
 
 namespace Assets.Fillwords.Scripts.Game.GameRoot
 {
-    public class GameplayInstaller : MonoInstaller
+    class GameplayInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {

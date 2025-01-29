@@ -7,7 +7,7 @@ using LogType = FillWords.Utils.LogType;
 
 namespace FillWords.Root.SaveLoad
 {
-    public class PrefsSaverLoader : ISaverLoader
+    class PrefsSaverLoader : ISaverLoader
     {
         const string progressKey = "PlayerProgress";
         const string settingsKey = "Settings";

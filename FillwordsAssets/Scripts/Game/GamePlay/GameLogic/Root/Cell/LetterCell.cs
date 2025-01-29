@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 namespace FillWords.Gameplay.Game
 {
-    public class LetterCell : LetterCellBase, IPointerEnterHandler, IPointerDownHandler
+    class LetterCell : LetterCellBase, IPointerEnterHandler, IPointerDownHandler
     {
         Image cellImage;
         [SerializeField] TMP_Text LetterText;

@@ -2,12 +2,11 @@ using FillWords.Root.UI;
 using FillWords.Root.Data;
 using FillWords.Root.SaveLoad;
 using FillWords.Gameplay.Game.Root;
-using FillWords.Gameplay.Level;
 using Zenject;
 
 namespace FillWords.Gameplay.Root
 {
-    public class GameplayBinder 
+    class GameplayBinder 
     {
         GameTabViewBase view;
         GameTabModel mainGameModel;

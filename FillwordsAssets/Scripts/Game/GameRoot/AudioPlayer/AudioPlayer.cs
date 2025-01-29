@@ -3,7 +3,7 @@ using R3;
 using UnityEngine;
 namespace FillWords.Root.Audio
 {
-    public class AudioPlayer : IAudioPlayer<AudioClip>
+    class AudioPlayer : IAudioPlayer<AudioClip>
     {
         readonly AudioSourcesHolder sourcesHolder;
         readonly AllDataContainer allDataContainer;

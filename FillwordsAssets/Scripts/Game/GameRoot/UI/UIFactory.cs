@@ -10,22 +10,13 @@ using UnityEngine;
 using Zenject;
 namespace FillWords.Root.UI
 {
-    public class UIFactory : IUIFactory
+    class UIFactory : IUIFactory
     {
         IAssetProvider assetProvider;
         readonly DiContainer container;
 
         Canvas uiRoot;
 
-        const string UIRootKey = "UIROOT";
-        const string MainLoadScreenKey = "MainLoadingScreen";
-        const string MainMenuKey = "MainMenu";
-        const string MenuHomeTabKey = "HomeTab";
-        const string SettingsTabKey = "SettingsTab";
-        const string GameViewKey = "Gameplay";
-        const string GameFieldViewKey = "GameField";
-        const string MiniSettingsKey = "MiniSettings";
-        const string VictoryViewKey = "VictoryPanel";
         public UIFactory(DiContainer _container)
         {
             container = _container;
@@ -37,48 +28,48 @@ namespace FillWords.Root.UI
         }
         async Task CreateUIRoot()
         {
-            Canvas uiRootPrefab = await assetProvider.LoadPrefab<Canvas>(UIRootKey);
+            Canvas uiRootPrefab = await assetProvider.LoadPrefab<Canvas>(AssetsKeys.UIRootKey);
             uiRoot = Object.Instantiate(uiRootPrefab);
             Object.DontDestroyOnLoad(uiRoot);
         }
         public async Task<LoadingScreenBase> CreateMainLoadScreen()
         {
-            MainLoadingScreen loadingPrefab = await assetProvider.LoadPrefab<MainLoadingScreen>(MainLoadScreenKey);
+            MainLoadingScreen loadingPrefab = await assetProvider.LoadPrefab<MainLoadingScreen>(AssetsKeys.MainLoadScreenKey);
             return CreateUI(loadingPrefab);
         }
         public async Task<MainMenuViewBase> CreateMainMenuView()
         {
-            MainMenuViewBase mainMenuPrefab = await assetProvider.LoadPrefab<MainMenuViewBase>(MainMenuKey);
+            MainMenuViewBase mainMenuPrefab = await assetProvider.LoadPrefab<MainMenuViewBase>(AssetsKeys.MainMenuKey);
             return CreateUI(mainMenuPrefab);
         }
         public async Task<HomeTabViewBase> CreateHomeTabView()
         {
-            HomeTabViewBase homeTabPrefab = await assetProvider.LoadPrefab<HomeTabViewBase>(MenuHomeTabKey);
+            HomeTabViewBase homeTabPrefab = await assetProvider.LoadPrefab<HomeTabViewBase>(AssetsKeys.MenuHomeTabKey);
             return CreateUI(homeTabPrefab);
         }
         public async Task<SettingsTabViewBase> CreateSettingsTabView()
         {
-            SettingsTabViewBase settingsTabPrefab = await assetProvider.LoadPrefab<SettingsTabViewBase>(SettingsTabKey);
+            SettingsTabViewBase settingsTabPrefab = await assetProvider.LoadPrefab<SettingsTabViewBase>(AssetsKeys.SettingsTabKey);
             return CreateUI(settingsTabPrefab);
         }
         public async Task<GameTabViewBase> CreateGameTabView()
         {
-            GameTabViewBase gameViewPrefab = await assetProvider.LoadPrefab<GameTabViewBase>(GameViewKey);
+            GameTabViewBase gameViewPrefab = await assetProvider.LoadPrefab<GameTabViewBase>(AssetsKeys.GameViewKey);
             return CreateUI(gameViewPrefab);
         }
         public async Task<GameFieldViewBase> CreateGameFieldView()
         {
-            GameFieldViewBase gameFieldViewPrefab = await assetProvider.LoadPrefab<GameFieldViewBase>(GameFieldViewKey);
+            GameFieldViewBase gameFieldViewPrefab = await assetProvider.LoadPrefab<GameFieldViewBase>(AssetsKeys.GameFieldViewKey);
             return CreateUI(gameFieldViewPrefab);
         }
         public async Task<MiniSettingsViewBase> CreateMiniSettingsView()
         {
-            MiniSettingsViewBase miniSettingsPrefab = await assetProvider.LoadPrefab<MiniSettingsViewBase>(MiniSettingsKey);
+            MiniSettingsViewBase miniSettingsPrefab = await assetProvider.LoadPrefab<MiniSettingsViewBase>(AssetsKeys.MiniSettingsKey);
             return CreateUI(miniSettingsPrefab);
         }
         public async Task<VictoryTabViewBase> CreateVictoryTabView()
         {
-            VictoryTabViewBase victoryTabPrefab = await assetProvider.LoadPrefab<VictoryTabViewBase>(VictoryViewKey);
+            VictoryTabViewBase victoryTabPrefab = await assetProvider.LoadPrefab<VictoryTabViewBase>(AssetsKeys.VictoryViewKey);
             return CreateUI(victoryTabPrefab);
         }
         T CreateUI<T>(T prefab) where T : MonoBehaviour

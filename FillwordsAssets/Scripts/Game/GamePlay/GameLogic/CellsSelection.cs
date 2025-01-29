@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace FillWords.Gameplay.Game
 {
-    public class CellsSelection
+    class CellsSelection
     {
         readonly List<LetterCellBase> selectedCells;
         readonly List<GameObject> appliedConnections;
@@ -14,7 +14,6 @@ namespace FillWords.Gameplay.Game
         readonly Transform parentTransform;
         GameObject connectionPrefab;
         Color selectionColor;
-        const string cellBorderKey = "CellSelectionBorder";
         public CellsSelection(IAssetProvider assetProvider, Transform _parentTransform)
         {
             selectedCells = new();
@@ -22,15 +21,15 @@ namespace FillWords.Gameplay.Game
             activeConnections = new();
             parentTransform = _parentTransform;
             UpdateColor();
-            Task.WaitAll(LoadBorder(assetProvider));
+            LoadConnection(assetProvider);
         }
         void UpdateColor()
         {
             selectionColor = new Color(Random.Range(0.1f, 0.8f), Random.Range(0.1f, 0.8f), Random.Range(0.1f, 0.8f));
         }
-        async Task LoadBorder(IAssetProvider assetProvider)
+        async void LoadConnection(IAssetProvider assetProvider)
         {
-            connectionPrefab = await assetProvider.LoadPrefab<GameObject>(cellBorderKey);
+            connectionPrefab = await assetProvider.LoadPrefab<GameObject>(AssetsKeys.CellConnectionKey);
         }
         public void SelectCell(LetterCellBase letterCell)
         {

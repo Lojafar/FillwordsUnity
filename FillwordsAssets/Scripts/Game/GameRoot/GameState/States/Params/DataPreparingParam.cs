@@ -2,7 +2,7 @@
 
 namespace FillWords.Root.GameState.States.Params
 {
-    public struct DataPreparingParam
+    struct DataPreparingParam
     {
         public readonly LoadingScreenBase LoadingScreen;
         public readonly float LoadedPercent;

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace FillWords.Root.Data.Initial
 {
-    public class InitDataSOLoader : IInitDataLoader
+    class InitDataSOLoader : IInitDataLoader
     {
         readonly IAssetProvider assetProvider;
         DataInitStateSO dataInitSO;

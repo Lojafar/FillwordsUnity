@@ -1,9 +1,8 @@
-﻿using FillWords.Root.Data;
-using FillWords.Root.UI.LoadingScreen;
+﻿using FillWords.Root.UI.LoadingScreen;
 
 namespace FillWords.Root.GameState.States.Params
 {
-    public struct GameLoadingParam
+    struct GameLoadingParam
     {
         public readonly LoadingScreenBase LoadingScreen;
         public readonly float LoadedPercent;

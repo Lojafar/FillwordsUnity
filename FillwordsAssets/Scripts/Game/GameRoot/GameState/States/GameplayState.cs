@@ -1,6 +1,6 @@
 namespace FillWords.Root.GameState.States
 {
-    public class GameplayState : IState
+    class GameplayState : IState
     {
         public void Enter()
         {

@@ -16,6 +16,7 @@ namespace FillWords.Root.Installers
         {
             Container.Bind<BootState>().AsSingle().NonLazy();
             Container.Bind<DataPreparingState>().AsSingle().NonLazy();
+            Container.Bind<AssetsLoadingState>().AsSingle().NonLazy();
             Container.Bind<GameLoadingState>().AsSingle().NonLazy();
             Container.Bind<GameplayState>().AsSingle().NonLazy();
         }

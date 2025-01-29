@@ -4,7 +4,7 @@ using R3;
 
 namespace FillWords.MainMenu.Root
 {
-    public class MainMenuView : MainMenuViewBase
+    class MainMenuView : MainMenuViewBase
     {
         [SerializeField] Button settingsButton;
         [SerializeField] Button homeButton;

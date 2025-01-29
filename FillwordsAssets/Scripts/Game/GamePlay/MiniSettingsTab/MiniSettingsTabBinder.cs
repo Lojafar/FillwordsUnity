@@ -5,7 +5,7 @@ using FillWords.Gameplay.Root;
 
 namespace FillWords.Gameplay
 {
-    public class MiniSettingsTabBinder
+    class MiniSettingsTabBinder
     {
         MiniSettingsViewBase settingsTabView;
         readonly GameTabModel gameTabModel;

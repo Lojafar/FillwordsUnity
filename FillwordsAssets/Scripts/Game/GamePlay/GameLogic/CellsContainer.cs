@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace FillWords.Gameplay.Game
 {
-    public class CellsContainer : MonoBehaviour
+    class CellsContainer : MonoBehaviour
     {
         LetterCellBase letterCellPrefab;
         [SerializeField] GridLayoutGroup cellsGrid;
@@ -15,11 +15,10 @@ namespace FillWords.Gameplay.Game
         [SerializeField] int MaxCellSize;
         [SerializeField] int CellSizeDivision;
         const int minCellsCount = 3;
-        const string CellPrefabKey = "LetterCell";
 
         public async void Init(IAssetProvider assetProvider)
         {
-            letterCellPrefab = await assetProvider.LoadPrefab<LetterCellBase>(CellPrefabKey);
+            letterCellPrefab = await assetProvider.LoadPrefab<LetterCellBase>(AssetsKeys.CellPrefabKey);
             spawnedLetterCells = new List<LetterCellBase>();
         }
         public void SetContainerSize(int sizeX)

@@ -4,7 +4,7 @@ using FillWords.MainMenu.Root;
 
 namespace FillWords.MainMenu
 {
-    public class HomeTabBinder 
+    class HomeTabBinder 
     {
         HomeTabViewBase homeTabView;
         readonly MainMenuModel mainMenuModel;

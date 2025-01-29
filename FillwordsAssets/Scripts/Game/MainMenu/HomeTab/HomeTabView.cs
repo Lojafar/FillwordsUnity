@@ -5,7 +5,7 @@ using R3;
 
 namespace FillWords.MainMenu
 {
-    public class HomeTabView : HomeTabViewBase
+    class HomeTabView : HomeTabViewBase
     {
         [SerializeField] Button playButton;
         [SerializeField] TMP_Text levelNumberText;

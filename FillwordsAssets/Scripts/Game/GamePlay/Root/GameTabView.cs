@@ -4,7 +4,7 @@ using TMPro;
 using R3;
 namespace FillWords.Gameplay.Root
 {
-    public class GameTabView : GameTabViewBase
+    class GameTabView : GameTabViewBase
     {
         [SerializeField] TMP_Text LevelNumberTMP;
         [SerializeField] Button LeaveLevelBtn;

@@ -5,7 +5,7 @@ using FillWords.MainMenu.Root;
 
 namespace FillWords.MainMenu
 {
-    public class SettingsTabBinder
+    class SettingsTabBinder
     {
         SettingsTabViewBase settingsTabView;
         readonly MainMenuModel mainMenuModel;

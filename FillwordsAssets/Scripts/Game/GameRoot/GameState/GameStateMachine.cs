@@ -19,6 +19,7 @@ namespace FillWords.Root.GameState
         {
             statesMap.Add(typeof(BootState), gameStatesFactory.CreateState<BootState>());
             statesMap.Add(typeof(DataPreparingState), gameStatesFactory.CreateState<DataPreparingState>());
+            statesMap.Add(typeof(AssetsLoadingState), gameStatesFactory.CreateState<AssetsLoadingState>());
             statesMap.Add(typeof(GameLoadingState), gameStatesFactory.CreateState<GameLoadingState>());
             statesMap.Add(typeof(GameplayState), gameStatesFactory.CreateState<GameplayState>());
            

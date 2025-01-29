@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace FillWords.Gameplay.Level
 {
     [Serializable]
-    public class LevelDataForJSON
+    class LevelDataForJSON
     {
         public char[] LettersMap;
         public int LineSize;

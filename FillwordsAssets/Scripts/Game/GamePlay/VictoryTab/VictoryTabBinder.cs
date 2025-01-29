@@ -4,7 +4,7 @@ using FillWords.Root.SaveLoad;
 using FillWords.Gameplay.Root;
 namespace FillWords.Gameplay
 {
-    public class VictoryTabBinder 
+    class VictoryTabBinder 
     {
         readonly GameTabModel gameTabModel;
         VictoryTabViewBase victoryTabView;

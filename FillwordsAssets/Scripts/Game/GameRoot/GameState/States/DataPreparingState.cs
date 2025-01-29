@@ -1,5 +1,4 @@
 ﻿using FillWords.Root.GameState.States.Params;
-using FillWords.Root.AssetManagment;
 using FillWords.Root.SaveLoad;
 using FillWords.Root.Data;
 using FillWords.Root.Data.Initial;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FillWords.Root.GameState.States
 {
-    public class DataPreparingState : IParamState<DataPreparingParam>
+    class DataPreparingState : IParamState<DataPreparingParam>
     {
         readonly GameStateMachine gameStateMachine;
         readonly ISaverLoader saverLoader;
@@ -25,7 +24,7 @@ namespace FillWords.Root.GameState.States
         {
             await LoadPlayerData();
             stateParam.LoadingScreen.UpdateProgress(stateParam.LoadedPercent + stateLoadingPercent);
-            gameStateMachine.EnterState<GameLoadingState, GameLoadingParam>(new GameLoadingParam(stateParam.LoadingScreen,
+            gameStateMachine.EnterState<AssetsLoadingState, AssetLoadingParams>(new AssetLoadingParams(stateParam.LoadingScreen,
                 stateParam.LoadedPercent + stateLoadingPercent));
         }
         public async Task LoadPlayerData()

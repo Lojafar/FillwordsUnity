@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace FillWords.Root.GameState.States
 {
-    public class GameLoadingState : IParamState<GameLoadingParam>
+    class GameLoadingState : IParamState<GameLoadingParam>
     {
         readonly GameStateMachine gameStateMachine;
         readonly IScenesLoader scenesLoader;

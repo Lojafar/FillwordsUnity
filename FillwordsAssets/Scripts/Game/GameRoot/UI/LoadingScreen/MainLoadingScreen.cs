@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 namespace FillWords.Root.UI.LoadingScreen
 {
-    public class MainLoadingScreen : LoadingScreenBase
+    class MainLoadingScreen : LoadingScreenBase
     {
         [SerializeField] Image progressBar;
         [SerializeField] TMP_Text percentsTMP;

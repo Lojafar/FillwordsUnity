@@ -5,7 +5,7 @@ using Zenject;
 
 namespace FillWords.MainMenu.Root
 {
-    public class MainMenuBinder 
+    class MainMenuBinder 
     {
         readonly DiContainer diContainer;
         MainMenuViewBase mainMenuView;

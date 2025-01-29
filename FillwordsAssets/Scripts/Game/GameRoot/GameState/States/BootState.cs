@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace FillWords.Root.GameState.States
 {
-    public class BootState : IState
+    class BootState : IState
     {
         readonly GameStateMachine gameStateMachine;
         readonly List<IPrewarmableService> prewarmServices;

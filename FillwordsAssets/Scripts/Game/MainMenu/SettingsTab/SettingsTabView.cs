@@ -2,7 +2,7 @@
 using R3;
 namespace FillWords.MainMenu
 {
-    public class SettingsTabView : SettingsTabViewBase
+    class SettingsTabView : SettingsTabViewBase
     {
         [SerializeField] ExtendedSlider MusicSlider;
         [SerializeField] ExtendedSlider SoundsSlider;

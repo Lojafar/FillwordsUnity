@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 namespace FillWords.Gameplay
 {
-    public class VictoryTabView : VictoryTabViewBase
+    class VictoryTabView : VictoryTabViewBase
     {
         [SerializeField] Button nextLevelButton;
         [SerializeField] Button showFieldButton;
